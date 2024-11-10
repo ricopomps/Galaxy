@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(- Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -29,7 +29,16 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(- Vector3.up * speed * 10 * Time.deltaTime);
+            transform.Rotate(-Vector3.up * speed * 10 * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.Translate(-Vector3.up * speed * Time.deltaTime);
         }
     }
 }
